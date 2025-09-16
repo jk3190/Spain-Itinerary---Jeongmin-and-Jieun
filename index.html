@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta name="viewport" content="width=device-width, initial-scale=0.9">
+  <meta name="viewport" content="width=device-width, initial-scale=0.8">
   <meta charset="UTF-8">
   <title>Spain Itinerary</title>
   <style>
@@ -12,10 +12,29 @@
       padding: 20px;
       color: #333;
     }
-    h1 {
-      text-align: center;
+
+    /* Flex container for title + images */
+    .title-container {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
       margin-bottom: 30px;
     }
+
+    .title-container h1 {
+      text-align: center;
+      flex: 1;
+      margin: 0 20px;
+      font-size: 26px;
+    }
+
+    .title-container img {
+      width: 60px;       /* adjust size as needed */
+      height: 60px;
+      border-radius: 12px;
+      object-fit: cover;
+    }
+
     .day {
       background: #fff;
       border-radius: 12px;
@@ -54,11 +73,26 @@
       margin: 10px 0;
       border-radius: 6px;
     }
+
+    /* Images inside day cards */
+    .day img {
+      width: 100%;
+      max-height: 200px;
+      object-fit: cover;
+      border-radius: 10px;
+      margin: 10px 0 15px;
+    }
   </style>
 </head>
 <body>
-  <h1>🗓️ Spain Itinerary</h1>
 
+  <div class="title-container">
+    <img src="Pic1.jpg" alt="Pic1">
+    <h1>🗓️ Spain Itinerary</h1>
+    <img src="Pic2.jpg" alt="Pic2">
+  </div>
+
+  <!-- Example for Day 1 -->
   <div class="day">
     <h2>Day 1: Tue, Nov 25 – Arrival → Madrid</h2>
     <div class="section"><strong>Morning</strong>
@@ -77,7 +111,6 @@
       </ul>
     </div>
   </div>
-
   <div class="day">
     <h2>Day 2: Wed, Nov 26 – Madrid Culture</h2>
     <div class="section"><strong>Morning – Malasaña (bohemian neighborhood)</strong>
@@ -183,6 +216,7 @@
   </div>
 </body>
 </html>
+
 
 
 
